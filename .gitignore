@@ -23,3 +23,5 @@ jboss/server/minimal/work/**/*
 .settings/**/*
 .project
 .classpath
+*.log
+*.gz

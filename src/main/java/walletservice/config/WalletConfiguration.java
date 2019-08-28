@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan("walletservice.controller")
+@ComponentScan({"walletservice.controller", "walletservice.restController"})
 public class WalletConfiguration implements WebMvcConfigurer {
 
 	@Profile("dev")

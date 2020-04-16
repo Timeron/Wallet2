@@ -92,7 +92,32 @@
 			<version>3.3.7</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.liquibase/liquibase-core -->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>3.8.0</version>
+		</dependency>
+
 	</dependencies>
+
+	<profiles>
+	<profile>
+			<id>prod</id>
+			<properties>
+				<spring.profiles.active>prod</spring.profiles.active>
+			</properties>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<spring.profiles.active>dev</spring.profiles.active>
+			</properties>
+		</profile>
+		
+
+	</profiles>
+
 	<build>
 		<plugins>
 			<!-- Package as an executable jar/war -->

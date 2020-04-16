@@ -9,9 +9,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ComponentScan({"walletservice.db.entity", "walletservice.service", "walletservice.controller", "walletservice.restController"})
 public class WalletConfiguration implements WebMvcConfigurer {
 
+	@Profile("prod")
+	public String prodProfile() {
+		return "Prod";
+	}
+	
 	@Profile("dev")
 	public String devProfile() {
 		return "DEV";
 	}
+	
+	
 	
 }

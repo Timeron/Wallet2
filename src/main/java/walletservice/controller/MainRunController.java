@@ -12,8 +12,14 @@ public class MainRunController {
 
 	Logger logger = LoggerFactory.getLogger(MainRunController.class);
 	
-	@RequestMapping("/service")
+	@RequestMapping("/an/service")
 	public String angularRun(Map<String, Object> model) {
+		logger.info("Open: Service Angular Page");
+		return "angular";
+	}
+	
+	@RequestMapping("/jsp/service")
+	public String jspRun(Map<String, Object> model) {
 		logger.info("Open: Service Angular Page");
 		return "angular";
 	}
